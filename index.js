@@ -34,6 +34,8 @@ const antd = {
   // Menu: require('./components/menu'),
   // Timeline: require('./components/timeline'),
   Button: require('./components/button'),
+  Button1: require('./components/Button1'),
+  Tab: require('./components/Tab'),
   // Icon: require('./components/icon'),
   // Row: require('./components/row'),
   // Col: require('./components/col'),

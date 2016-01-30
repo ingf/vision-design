@@ -1,0 +1,20 @@
+ {
+    title: '按钮类型',
+    id: 'components-button-demo-basic',
+    tags: [],
+    filepath: 'components/button/demo/basic.md',
+    directory: 'components/button/demo',
+    filename: 'basic',
+    meta: {
+        title: '按钮类型',
+        order: '0',
+        description: '<p>按钮有三种类型：主按钮、次按钮、幽灵按钮。</p>\n<p>通过设置 <code>type</code> 为 <code>primary</code> <code>ghost</code> 可分别创建主按钮、幽灵按钮，若不设置 <code>type</code> 值则为次按钮。不同的样式可以用来区别其重要程度。</p>\n<p>主按钮和次按钮可独立使用，需要强引导用主按钮。幽灵按钮用于和主按钮组合。</p>',
+        filepath: 'components/button/demo/basic.md',
+        filename: 'basic',
+        directory: 'components/button/demo',
+        id: 'components-button-demo-basic',
+        template: 'code'
+    },
+    status: 'public',
+    toc: ''
+}

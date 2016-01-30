@@ -67,6 +67,7 @@
     "semver": "~5.0.3",
     "util-deprecate": "~1.0.1",
     "velocity-animate": "~1.2.2",
+    "vu-base": "^1.0.0",
     "warning": "~2.1.0"
   },
   "devDependencies": {
@@ -98,6 +99,7 @@
     "lesshint-antd": "^1.2.1",
     "lodash": "^3.10.0",
     "nico-jsx": "~0.7.0",
+    "node-sass": "^3.4.2",
     "pre-commit": "1.x",
     "react": "0.14.x",
     "react-addons-test-utils": "0.14.x",
@@ -106,6 +108,8 @@
     "react-router": "~1.0.3",
     "react-stateless-wrapper": "~1.0.2",
     "reqwest": "~2.0.5",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
     "webpack": "^1.10.1",
     "webpack-babel-jest": "^1.0.0",
     "webpack-dev-middleware": "^1.2.0"
