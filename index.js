@@ -1,7 +1,7 @@
 import React from 'react';
 
 const antd = {
-  Demo: require('./components/Demo'),
+  Button: require('./components/Button'),
 };
 
 antd.version = require('./package.json').version;
