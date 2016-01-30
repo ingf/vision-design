@@ -5,7 +5,12 @@ InstantClickChangeFns.push(function() {
       window.location.href = window.location.href;
     }, 0);
   }
-
+  $(this).addClass('expand');
+    $('.code-box .highlight').animate({
+      height: 'show',
+      opacity: 1
+    }, 150);
+    
   $('.component-demos .icon-all').on('click', function() {
     if ($(this).hasClass('expand')) {
       $(this).removeClass('expand');

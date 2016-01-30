@@ -1,5 +1,3 @@
-import Button from './button';
-import ButtonGroup from './button-group';
+var Button     =   require('./src/Button');
 
-Button.Group = ButtonGroup;
 export default Button;
