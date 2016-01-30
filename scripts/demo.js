@@ -37,20 +37,20 @@ window['object-assign'] = require('object-assign');
 window['classnames'] = require('classnames');
 window['reqwest'] = require('reqwest');
 
-antd.DatePicker.locale = {
-  en_US: require('../components/date-picker/locale/en_US'),
-  zh_CN: require('../components/date-picker/locale/zh_CN'),
-};
+// antd.DatePicker.locale = {
+//   en_US: require('../components/date-picker/locale/en_US'),
+//   zh_CN: require('../components/date-picker/locale/zh_CN'),
+// };
 
-antd.Calendar.locale = {
-  en_US: require('../components/calendar/locale/en_US'),
-  zh_CN: require('../components/calendar/locale/zh_CN'),
-};
+// antd.Calendar.locale = {
+//   en_US: require('../components/calendar/locale/en_US'),
+//   zh_CN: require('../components/calendar/locale/zh_CN'),
+// };
 
-antd.Pagination.locale = {
-  en_US: require('../components/pagination/locale/en_US'),
-  zh_CN: require('../components/pagination/locale/zh_CN'),
-};
+// antd.Pagination.locale = {
+//   en_US: require('../components/pagination/locale/en_US'),
+//   zh_CN: require('../components/pagination/locale/zh_CN'),
+// };
 
 InstantClickChangeFns.push(function () {
   // auto complete for components
