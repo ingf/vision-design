@@ -66,9 +66,9 @@
           <li class="{%- if post.meta.filepath === 'README.md' %}current{%- endif %}">
             <a href="{{static_url('../')}}" data-no-instant>首页</a>
           </li>
-          <li class="{%- if post.directory|rootDirectoryIn(['spec']) %}current{%- endif %}">
+         <!--  <li class="{%- if post.directory|rootDirectoryIn(['spec']) %}current{%- endif %}">
             <a href="{{static_url('../spec/introduce')}}">设计</a>
-          </li>
+          </li> -->
           <li class="{%- if post.directory|rootDirectoryIn(['docs','components']) or post.meta.filepath === 'CHANGELOG.md' %}current{%- endif %}">
             <a href="{{static_url('../docs/introduce')}}">React UI</a>
           </li>

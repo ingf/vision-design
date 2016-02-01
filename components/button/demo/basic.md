@@ -10,7 +10,13 @@
 import { Button } from 'antd';
 
 ReactDOM.render(<div>
-  <Button>DEMO</Button>
+    <Button type="primary">主按钮</Button>
+    <Button>次按钮</Button>
+    <Button type="secondary"第>三按钮</Button>
+    <Button type="primary-inverse">主按钮-空白</Button>
+    <div>
+        <Button size="large" disabled>购买</Button>
+    </div>
 </div>,
 mountNode);
 ````
