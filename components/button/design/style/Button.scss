@@ -1,5 +1,4 @@
 @import 'vu-base/base';
-
 .Button {
     border-radius: 2px;
     display: inline-block;
@@ -47,7 +46,15 @@
     // &--full-width {
     //     width: 100%
     // }
-    [disabled] {
-        opacity: .5;
+    &[disabled] {
+        background: #E5E5E5;
+        color: #999;
+        border: 1px solid #e5e5e5;
+        
+    }
+    &[class*="inverse"][disabled] {
+        background: #fff;
+        color: #999;
+        border: 1px solid #e5e5e5;
     }
 }

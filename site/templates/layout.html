@@ -50,7 +50,7 @@
   </head>
   <body {% block bodyAttribute %}{% endblock %}>
     <header id="header" class="clearfix">
-      <a class="logo" href="{{static_url('../')}}">
+      <!-- <a class="logo" href="{{static_url('../')}}">
         <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
         {{ config.site.name }}
       </a>
@@ -59,7 +59,7 @@
       </div>
       <div class="global-hint">
         0.11 已发布，0.10 文档请访问 <a href="http://010x.ant.design/">010x.ant.design</a>
-      </div>
+      </div> -->
       <nav class="nav">
         <span class="bar"></span>
         <ul>
@@ -70,11 +70,11 @@
             <a href="{{static_url('../spec/introduce')}}">设计</a>
           </li> -->
           <li class="{%- if post.directory|rootDirectoryIn(['docs','components']) or post.meta.filepath === 'CHANGELOG.md' %}current{%- endif %}">
-            <a href="{{static_url('../docs/introduce')}}">React UI</a>
+            <a href="{{static_url('../docs/introduce')}}">Vision UI</a>
           </li>
-          <li>
+          <!-- <li>
             <a target="_blank" href="https://github.com/ant-design/ant-design">Github</a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <div class="nav-phone-icon"></div>
