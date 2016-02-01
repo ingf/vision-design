@@ -1,10 +1,10 @@
 import React from 'react';
 
-const antd = {
-  Button: require('./components/Button'),
+const vision = {
+  Button: require('./components/vu-button'),
 };
 
-antd.version = require('./package.json').version;
+vision.version = require('./package.json').version;
 
 const ReactVersion = React.version;
 if (process.env.NODE_ENV !== 'production') {
@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
   const semver = require('semver');
   const reactVersionInDeps = require('./package.json').devDependencies.react;
   warning(semver.satisfies(ReactVersion, reactVersionInDeps) || semver.gtr(ReactVersion, reactVersionInDeps),
-    `antd@${antd.version} need react@${reactVersionInDeps} or higher, which is react@${ReactVersion} now.`);
+    `vision@${vision.version} need react@${reactVersionInDeps} or higher, which is react@${ReactVersion} now.`);
 }
 
-module.exports = antd;
+module.exports = vision;

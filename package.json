@@ -42,6 +42,7 @@
     "util-deprecate": "~1.0.1",
     "velocity-animate": "~1.2.2",
     "vu-base": "^1.0.0",
+    "vu-button": "^1.0.0",
     "warning": "~2.1.0"
   },
   "devDependencies": {
@@ -90,9 +91,10 @@
   },
   "scripts": {
     "babel": "babel components index.js --out-dir lib",
-    "start": "npm run clean && nico server --watch",
+    "start": "npm run clean && npm run cp && nico server --watch",
     "clean": "rm -rf _site dist",
-    "site": "npm run clean && webpack --config webpack.deploy.config.js && webpack --config webpack.antd.config.js && NODE_ENV=PRODUCTION nico build",
+    "cp": "cp -r node_modules/vu-* ./components",
+    "site": "npm run clean && npm run cp && webpack --config webpack.deploy.config.js && webpack --config webpack.antd.config.js && NODE_ENV=PRODUCTION nico build",
     "deploy": "rm -rf node_modules && npm run just-deploy",
     "just-deploy": "npm run site && node scripts/deploy.js",
     "lint": "eslint components test index.js --ext '.js,.jsx' && npm run mdlint && npm run lesshint",
