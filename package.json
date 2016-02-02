@@ -13,15 +13,12 @@
     "framework",
     "frontend"
   ],
-  "contributors": [
-    "ant"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ant-design/ant-design"
+    "url": "https://github.com/ingf/vision-design"
   },
   "bugs": {
-    "url": "https://github.com/ant-design/ant-design/issues"
+    "url": "https://github.com/ingf/vision-design/issues"
   },
   "main": "lib/index",
   "files": [
