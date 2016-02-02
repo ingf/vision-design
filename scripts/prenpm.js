@@ -2,8 +2,15 @@ var fs = require('fs');
 var cwd = process.cwd();
 var path = require('path');
 var pkg = require('../package');
+var exec = require('child_process').exec;
 
 var originalIndex = fs.readFileSync(path.join(cwd, 'lib/index.js'), 'utf-8');
+
+var components = fs.readdirSync(path.join(cwd, 'components'));
+components.map(function(item){
+    var design = path.join(cwd, 'components',item, 'design')
+    exec('cp -r ' + design + ' ' + path.join(cwd, 'lib', item));
+});
 var newIndex = originalIndex
   .replace(/\/components\//g, '/')
   .replace(/require\(\'\.\/package.json\'\)/g, "require('./package')");
