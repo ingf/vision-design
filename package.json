@@ -1,11 +1,9 @@
 {
-  "name": "antd",
-  "version": "0.11.2",
-  "title": "Ant Design",
+  "name": "vud",
+  "version": "0.0.1",
+  "title": "Vision Design",
   "description": "一个 UI 设计语言",
-  "homepage": "http://ant.design/",
   "keywords": [
-    "ant",
     "design",
     "react",
     "react-component",
@@ -126,5 +124,15 @@
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
 }
