@@ -2,6 +2,7 @@ import React from 'react';
 
 const vision = {
   Button: require('./components/vu-button'),
+  Label: require('./components/vu-label'),
 };
 
 vision.version = require('./package.json').version;

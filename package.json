@@ -1,6 +1,6 @@
 {
   "name": "vud",
-  "version": "0.0.3",
+  "version": "0.1.3",
   "title": "Vision Design",
   "description": "一个 UI 设计语言",
   "keywords": [
@@ -37,7 +37,8 @@
     "util-deprecate": "~1.0.1",
     "velocity-animate": "~1.2.2",
     "vu-base": "^1.0.0",
-    "vu-button": "^1.0.0",
+    "vu-button": "^1.0.2",
+    "vu-label": "^1.0.2",
     "warning": "~2.1.0"
   },
   "devDependencies": {

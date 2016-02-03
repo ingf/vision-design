@@ -26,35 +26,35 @@ require('../style/index.less');
 window['css-animation'] = require('css-animation');
 window['react-router'] = require('react-router');
 window.CopyToClipboard = require('react-copy-to-clipboard');
-var antd = require('../index');
+var vud = require('../index');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var semver = require('semver');
-window.antd = antd;
+window.vud = vud;
 window.React = React;
 window.ReactDOM = ReactDOM;
 window['object-assign'] = require('object-assign');
 window['classnames'] = require('classnames');
 window['reqwest'] = require('reqwest');
 
-// antd.DatePicker.locale = {
+// vud.DatePicker.locale = {
 //   en_US: require('../components/date-picker/locale/en_US'),
 //   zh_CN: require('../components/date-picker/locale/zh_CN'),
 // };
 
-// antd.Calendar.locale = {
+// vud.Calendar.locale = {
 //   en_US: require('../components/calendar/locale/en_US'),
 //   zh_CN: require('../components/calendar/locale/zh_CN'),
 // };
 
-// antd.Pagination.locale = {
+// vud.Pagination.locale = {
 //   en_US: require('../components/pagination/locale/en_US'),
 //   zh_CN: require('../components/pagination/locale/zh_CN'),
 // };
 
 // InstantClickChangeFns.push(function () {
 //   // auto complete for components
-//   var Select = antd.Select;
+//   var Select = vud.Select;
 //   var Option = Select.Option;
 //   // 获取搜索数据
 //   var searchData = window.ANT_COMPONENTS.sort(function (a, b) {
@@ -96,14 +96,14 @@ window['reqwest'] = require('reqwest');
 // });
 
 // InstantClickChangeFns.push(function () {
-//   var Select = antd.Select;
+//   var Select = vud.Select;
 //   var Option = Select.Option;
 //   var versionsHistory = {
 //     '0.9.2': '09x.ant.design',
 //     '0.10.4': '010x.ant.design'
 //   };
-//   versionsHistory[antdVersion.latest] =
-//     versionsHistory[antdVersion.latest] || 'ant.design';
+//   versionsHistory[vudVersion.latest] =
+//     versionsHistory[vudVersion.latest] || 'ant.design';
 //   var versions = Object.keys(versionsHistory).sort(function (a, b) {
 //     return semver.lt(a, b);
 //   });
@@ -119,7 +119,7 @@ window['reqwest'] = require('reqwest');
 //   }
 
 //   ReactDOM.render(
-//     <Select defaultValue={antdVersion.latest} size="small"
+//     <Select defaultValue={vudVersion.latest} size="small"
 //             dropdownMatchSelectWidth={false}
 //             onChange={onChange}>{options}</Select>
 //     , document.getElementById('versions-select'));
@@ -145,4 +145,4 @@ window.BrowserDemo = React.createClass({
   }
 });
 
-module.exports = antd;
+module.exports = vud;

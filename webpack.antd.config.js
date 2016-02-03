@@ -1,6 +1,6 @@
 var config = require('./webpack.config');
 config.entry = {
-  'antd': ['./index.js']
+  'vision': ['./index.js']
 };
 config.externals = {
   'react': {
@@ -16,6 +16,6 @@ config.externals = {
     amd: 'react-dom'
   }
 };
-config.output.library = 'antd';
+config.output.library = 'vision';
 config.output.libraryTarget = 'umd';
 module.exports = config;
