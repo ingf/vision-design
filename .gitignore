@@ -21,6 +21,7 @@ node_modules/
 npm-debug.log
 nohup.out
 _site
+dist
 components
 lib
 elasticsearch-*
