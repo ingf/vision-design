@@ -22,6 +22,7 @@ npm-debug.log
 nohup.out
 _site
 components
+dist
 lib
 elasticsearch-*
 config/base.yaml
