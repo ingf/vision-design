@@ -1,0 +1,22 @@
+{
+  "name": "vu-label",
+  "version": "1.0.3",
+  "description": "vision UI Component: Label",
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "vu-base": "^1.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  },
+  "author": {
+    "name": "vision-ui@wepiao"
+  },
+  "license": "ISC",
+  "readme": "\n# Label\n\n- category: Components\n- chinese: 标签\n- type: 基本\n\n---\n\n标签的描述。\n\n## 何时使用\n\n在需要的时候使用。\n\n\n## API\n\n- 属性说明如下：\n\n属性 | 说明 | 类型 | 默认值\n-----|-----|-----|------\ntype | string | undefined | 设置按钮类型，可选值为 `primary` `secondary` \nonClick | `click` 事件的 handler | Function | `function() {}`\n\n",
+  "readmeFilename": "README.md",
+  "gitHead": "22d8b40289fdc27e5ec00532dc9f5f224848015a",
+  "_id": "vu-label@1.0.3",
+  "scripts": {},
+  "_shasum": "fcdede5ed493f400385365fab4e425fb13a73b25",
+  "_from": "vu-label@>=1.0.3 <2.0.0"
+}

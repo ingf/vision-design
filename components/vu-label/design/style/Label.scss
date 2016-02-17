@@ -1,0 +1,27 @@
+@import 'vu-base/base';
+
+.Label{
+    display: inline-block;
+    height: 14px;
+    box-sizing: border-box;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin: 1px 4px 1px 1px;
+    box-shadow: 0 0 1px red inset;
+    background: #fff;
+    color: $red;
+    &--primary{
+        box-shadow: 0 0 1px darken($blue, 10%) inset;
+        color: $blue;
+    }
+    &--secondary{
+        box-shadow: 0 0 1px darken(#262673, 10%) inset;
+        color: #7e8bb9;
+    }
+    &[disabled]{
+        box-shadow: 0 0 1px darken(#999, 10%) inset;
+        color: #949494;
+    }
+}

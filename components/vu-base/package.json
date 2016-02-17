@@ -1,0 +1,47 @@
+{
+  "name": "vu-base",
+  "version": "1.0.0",
+  "description": "vision ui base sass",
+  "main": "base.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wepiaoFEI/vu-base.git"
+  },
+  "keywords": [
+    "scss"
+  ],
+  "author": {
+    "name": "FEI@wepiao"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wepiaoFEI/vu-base/issues"
+  },
+  "homepage": "https://github.com/wepiaoFEI/vu-base#readme",
+  "gitHead": "a1a565b9e5617863414be870cad65e28e2aa2b4c",
+  "_id": "vu-base@1.0.0",
+  "_shasum": "a81bb5afdd92c9e3403aa5637d1c0fa57476fafd",
+  "_from": "vu-base@>=1.0.0 <2.0.0",
+  "_npmVersion": "3.3.12",
+  "_nodeVersion": "5.3.0",
+  "_npmUser": {
+    "name": "duanhong",
+    "email": "duanhong@live.com"
+  },
+  "dist": {
+    "shasum": "a81bb5afdd92c9e3403aa5637d1c0fa57476fafd",
+    "tarball": "http://registry.npmjs.org/vu-base/-/vu-base-1.0.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "duanhong",
+      "email": "duanhong@live.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/vu-base/-/vu-base-1.0.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

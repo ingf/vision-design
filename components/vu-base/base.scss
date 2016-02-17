@@ -1,0 +1,1128 @@
+@charset "UTF-8";
+//----------------------------------------------------- 
+// normalize scss
+//----------------------------------------------------- 
+
+
+// 根据下面的_normalize.scss文件砍掉了标题部分，然后改变了对ie6-7支持的变量为$lte7
+// thanks:https://github.com/kristerkari/normalize.scss/blob/master/_normalize.scss
+// Normalize.scss based on Nicolas Gallagher and Jonathan Neal's
+// normalize.css v2.1.1 | MIT License | git.io/normalize
+
+
+// =============================================================================
+// HTML5 display definitions
+// =============================================================================
+
+// Corrects block display not defined in IE6/7/8/9 & FF3
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+// Corrects inline-block display not defined in IE6/7/8/9 & FF3
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+// 1. Prevents modern browsers from displaying 'audio' without controls
+// 2. Remove excess height in iOS5 devices
+
+audio:not([controls]) {
+    display: none; // 1
+    height: 0; // 2
+}
+
+// Addresses styling for 'hidden' attribute not present in IE8/9
+
+[hidden] {
+    display: none;
+}
+
+// =============================================================================
+// Base
+// =============================================================================
+
+// 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+//    http://clagnut.com/blog/348/#c790
+// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+//    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+
+html {
+    // @if $lte7 {
+    //     font-size: 100%; // 1
+    // }
+    -webkit-text-size-adjust: 100%; // 2
+    //-ms-text-size-adjust: 100%; // 2
+}
+
+// Addresses font-family inconsistency between 'textarea' and other form elements.
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+// Addresses margins handled incorrectly in IE6/7
+
+body {
+    margin: 0;
+}
+
+// =============================================================================
+// Links
+// =============================================================================
+
+// 1. Addresses outline displayed oddly in Chrome
+// 2. Improves readability when focused and also mouse hovered in all browsers
+//    people.opera.com/patrickl/experiments/keyboard/test
+
+a {
+
+    // 1
+
+    &:focus {
+        outline: thin dotted;
+    }
+
+    // 2
+
+    &:hover,
+    &:active {
+        outline: 0;
+    }
+}
+
+
+// Addresses styling not present in IE 8/9, S5, Chrome
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+// Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+
+b, 
+strong { 
+    font-weight: bold; 
+}
+
+
+// Addresses styling not present in S5, Chrome
+
+dfn {
+    font-style: italic;
+}
+
+// Addresses styling not present in IE6/7/8/9
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+// Corrects font family set oddly in IE6, S4/5, Chrome
+// en.wikipedia.org/wiki/User:Davidgothberg/Test59
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+// Improves readability of pre-formatted text in all browsers
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+// Set consistent quote types.
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+// 1. Addresses CSS quotes not supported in IE6/7
+// 2. Addresses quote property not supported in S4
+
+// 2
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+// Address inconsistent and variable font size in all browsers.
+ 
+small {
+    font-size: 80%;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+// gist.github.com/413930
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+// =============================================================================
+// Embedded content
+// =============================================================================
+
+// 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+// 2. Improves image quality when scaled in IE7
+//    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+
+img {
+    border: 0; // 1
+}
+
+// Corrects overflow displayed oddly in IE9
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+// =============================================================================
+// Figures
+// =============================================================================
+
+// Addresses margin not present in IE6/7/8/9, S5, O11
+
+figure {
+    margin: 0;
+}
+
+// =============================================================================
+// Forms
+// =============================================================================
+
+
+// Define consistent border, margin, and padding
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+// 1. Corrects color not being inherited in IE6/7/8/9
+// 2. Remove padding so people aren't caught out if they zero out fieldsets.
+// 3. Corrects text not wrapping in FF3 
+// 4. Corrects alignment displayed oddly in IE6/7
+
+legend {
+    border: 0; // 1
+    padding: 0; // 2
+    white-space: normal; // 3
+    // @if $lte7 {
+    //     *margin-left: -7px; // 4
+    // }    
+}
+
+// 1. Correct font family not being inherited in all browsers.
+// 2. Corrects font size not being inherited in all browsers
+// 3. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+// 4. Improves appearance and consistency in all browsers
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; // 1
+    font-size: 100%; // 2
+    margin: 0; // 3
+    vertical-align: baseline; // 4 
+}
+
+// Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+
+button,
+input {
+    line-height: normal;
+}
+
+// Address inconsistent `text-transform` inheritance for `button` and `select`.
+// All other form control elements do not inherit `text-transform` values.
+// Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+// Correct `select` style inheritance in Firefox 4+ and Opera.
+
+button,
+select {
+    text-transform: none;
+}
+
+// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+//    and `video` controls
+// 2. Corrects inability to style clickable 'input' types in iOS
+// 3. Improves usability and consistency of cursor style between image-type
+//    'input' and others
+// 4. Removes inner spacing in IE7 without affecting normal text inputs
+//    Known issue: inner spacing remains in IE6
+
+button,
+html input[type="button"], // 1
+input[type="reset"], 
+input[type="submit"] {
+    -webkit-appearance: button; // 2
+    cursor: pointer; // 3  
+}
+
+// Re-set default cursor for disabled elements
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+// 1. Addresses box sizing set to content-box in IE8/9
+// 2. Removes excess padding in IE8/9
+// 3. Removes excess padding in IE7
+//    Known issue: excess padding remains in IE6
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; // 1
+    padding: 0; // 2
+}
+
+// 1. Addresses appearance set to searchfield in S5, Chrome
+// 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+
+input[type="search"] {
+    //-webkit-appearance: textfield; // 1
+    //-moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; // 2
+    box-sizing: content-box;
+}
+
+// Remove inner padding and search cancel button in Safari 5 and Chrome
+// on OS X.
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+// Removes inner padding and border in FF3+
+// www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+
+button, input {
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+
+// 1. Removes default vertical scrollbar in IE6/7/8/9
+// 2. Improves readability and alignment in all browsers
+
+textarea {
+    overflow: auto; // 1
+    vertical-align: top; // 2
+}
+
+// =============================================================================
+// Tables
+// =============================================================================
+ 
+// Remove most spacing between table cells
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+//-----------------------------------------------------
+// reset scss
+// normalize之后，设置一些其他的样式及一些归零
+//-----------------------------------------------------
+
+
+html {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  border:0 none;
+  vertical-align: middle;
+}
+textarea {
+  resize: vertical;
+}
+h1,h2,h3,h4,h5,h6,p,figure,form {
+  margin:0;
+}
+// ul ol dl
+ul,ol,li,dl,dd{
+  margin: 0;
+  padding:0;
+}
+ul,ol{
+  list-style: none outside none;
+}
+
+
+// set
+//----------------------------------------------------------------
+
+$bg-gap:            4%!default;         //主体边距
+
+// color
+// --------------------
+$bg-color:          #fff!default; //fbfbfb
+$green:             #29cc6d!default;
+$red:               #f7665e!default;
+$yellow:            #ffc600!default;
+$orangeRed:         #f94!default;
+$gray:              #949494!default;
+$black:             #333!default;
+$blue:              #1b97ff!default;
+$white:             #fff!default;
+
+// font color
+$title-font:        #333 !default;
+$base-font:         #666 !default;
+$link-font:         $base-font !default;
+$gray-font:         $gray !default;
+
+// 主色
+$main-color:        $green;
+
+// font
+// --------------------
+
+// 2.1rem   40
+// 1.68rem  32
+
+// 2rem     36-
+// 1.6rem   30-
+// 1.5rem   28-
+// 1.3rem   26- 默认
+// 1.22rem  24-
+// 1.1rem   22
+// 1rem     18-20
+
+$h1-size:           2rem!default;
+$h2-size:           1.68rem!default;
+$h3-size:           1.5rem!default;
+$base-size:         1.3rem!default; //默认
+$small-size:        1.22rem!default;
+$milli-size:        1.1rem!default;
+$micro-size:        1rem!default;
+
+%XXL{font-size:     $h1-size!important;}
+%XL {font-size:     $h2-size!important;}
+%L  {font-size:     $h3-size!important;}
+%M  {font-size:     $base-size!important;} //默认
+%S  {font-size:     $small-size!important;}
+%XS {font-size:     $milli-size!important;}
+%XXS{font-size:     $micro-size!important;}
+
+
+
+// radius
+// --------------------
+$base-radius:       2px!default;
+$small-radius:      .3em!default;
+$large-radius:      8px!default;
+
+
+// z-index
+// --------------------
+$z-idx-0:           -1!default;
+$z-idx-1:           9!default;          //默认
+$z-idx-2:           99!default;
+$z-idx-3:           999!default;
+$z-idx-10000:       10000 + 1;
+
+
+$gap:           10px;
+$border-color:  lighten(#e3e3e3,5%); //e3e3e3
+
+
+// .red{color: lighten($red,20%) !important;}
+.red{color:         $red !important;}
+.orangeRed{color:   $orangeRed!important;}
+.yellow{color:      $yellow!important;}
+.gray{color:        $gray!important;}
+.blue{color:        $blue!important;}
+.black{color:      $black!important;}
+.green{color:      $green!important;}
+.main-color{color: $main-color!important;}
+
+.user-select-text{-webkit-user-select:text;}
+.user-select-none{-webkit-user-select:none;}
+// 管不用呢
+img{
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-pointer-events: none;
+}
+/* 事件焦点不显示 */
+.tap-none{-webkit-tap-highlight-color:transparent;}
+/* 过长晃示省略号... */
+.ell,%ell{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* 透明 */
+%invisible{
+    color:transparent!important;
+    //-webkit-user-select:none; // 禁选
+    text-shadow:none!important;
+}
+.center{text-align:center!important;}
+.left{text-align:left!important;}
+.right{text-align:right!important;}
+.in-b{display: inline-block!important;}
+.no-border{border:none!important;}
+.mlr0{margin-left: -($gap+5)!important;margin-right: -($gap+5)!important;}
+
+// html body
+// ----------------------------------------------------------
+%box-s{
+    -webkit-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+html{
+    // font-size: 62.5%;
+    font-size: 10px;
+    min-height: 100%;
+    background-color:   $bg-color;
+    @extend %box-s;
+    // &.bg{
+    //  border-top:3px solid $green;
+    // }
+}
+
+body{
+    color:  $base-font;
+    // font:   $base-size Arial;
+    font: 13px Helvetica, STHeiTi, sans-serif;
+    -webkit-text-size-adjust: 100%!important; // 禁止字体缩放 重置字体
+    -webkit-user-select: none;      // 禁止选择文字
+    -webkit-touch-callout: none;    // 禁止复制、另存
+}
+a{
+    color:  $link-font;
+    text-decoration: none;
+    outline: none;
+    &:visited{
+        color:inherit;
+    }
+}
+
+i{font-style: normal;}
+button,input,select,textarea{color:$base-font;font:$h2-size/1 Arial;outline:none;}
+
+%m0{
+    margin: (-$bg-gap+-.1) (-$bg-gap+-.3) 0;
+    @extend %box-s;
+}
+.mp0{margin: 0!important;padding: 0!important;}
+.mp0-patch{margin-left: -$gap!important;margin-right: -$gap!important;}
+li.mp0{list-style-type: none;}
+
+h1,h2,h3,h4,h5,h6{margin:.5em 0;}
+b,strong{color:#666;}
+
+// ----------------------------------------------------------
+
+$hr-bg:         url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAATSURBVBhXY7h48fJ/hv////8HACOgB3GXj7qSAAAAAElFTkSuQmCC)!default;
+$hr-repeat:     repeat-x!default;
+$hr-size:       1px 1px!default;
+
+%border-1px{
+    position: relative;
+    border: none;
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        display: block;
+        overflow: hidden;
+        background-color: lighten($gray, 25%);
+        -webkit-transform: scaleY(.5);
+                transform: scaleY(.5);
+    }
+}
+
+%hr{
+    background-image:   $hr-bg;
+    background-repeat:  $hr-repeat;
+    background-size:    $hr-size;
+}
+%hr-top     {@extend %hr;background-position: 0 0;}
+%hr-bottom  {@extend %hr;background-position: 0 100%;}
+%hr-tb      {
+    background:         $hr-bg $hr-repeat ,$hr-bg $hr-repeat  0 100%;
+    background-size:    $hr-size, $hr-size;
+}
+%hr-left    {
+    position: relative;
+    overflow: hidden;
+    &:after{
+        content: "";
+        position: absolute;
+        top:0;
+        left:-9px;
+        width: 54px;
+        height: 2px;
+        @extend %hr;
+        //background-size: auto 3px!important;
+        //background-color: red;
+        -webkit-transform: rotate(-90deg);
+        -webkit-transform-origin: 29px 20px;
+    }
+
+
+}
+
+
+@media only screen and (-webkit-max-device-pixel-ratio:1.5){
+    %hr,%hr-tb{background-size: auto;} //非视网膜屏
+    //%hr-tb{background-size: auto, auto;}
+
+}
+
+.hr{
+    overflow: hidden;
+    border:none;
+    height: 1px;
+    margin: 11px 0;
+    background-color: $border-color;
+}
+
+
+// HR END --------------
+
+
+
+
+// 全屏
+// ----------------------------------------------------------
+@mixin full-screen( $full-position:absolute, $full-z:$z-idx-1, $full-bg:none ){
+    position:   $full-position;
+    z-index:    $full-z;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $full-bg;
+}
+
+.full-screen{
+    @include full-screen(fixed, $z-idx-3 +-1, rgba(0,0,0,.6));
+    //opacity: 0;
+    //-webkit-transition-duration: 0.25s;
+    //-webkit-transition: .25s;
+}
+
+
+// forme
+//-----------------------------------------------------
+$base-color:            #ccc;
+$input-color:           $base-color;
+
+%input{
+    max-width:100%;
+    width: 100%;
+    margin: 0;
+    padding: .5em;
+    border: 1px #caccc0 solid;
+    border-top-color:#a9ac9a;
+    box-shadow: 0 0 2px #fff,0 1px 2px rgba(0,0,0,0.1) inset;
+    border-radius:      $base-radius;
+
+    resize: none;
+    -webkit-appearance: none;
+    @extend %box-s;
+}
+
+::-webkit-input-placeholder {color:$gray;}
+
+// button
+//-----------------------------------------------------
+
+%btn-shadow{
+    -webkit-text-shadow:0 -1px 0 rgba(0,0,0,.3)!important;
+    text-shadow:0 -1px 0 rgba(0,0,0,.3)!important;
+}
+%btn-shadow-1{
+    -webkit-text-shadow:0 1px 0 rgba(0,0,0,.3)!important;
+    text-shadow:0 1px 0 rgba(0,0,0,.3)!important;
+}
+%btn-shadow-0{
+    -webkit-text-shadow:none!important;
+    text-shadow:none!important;
+}
+
+%btn{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    margin: .5em 0;
+    padding: .6em 2em .4em;
+    font-size: $h2-size;
+    line-height: 1;
+    text-align: center;
+    text-decoration:none;
+    // -webkit-text-shadow:0 1px 1px #fff;
+    // text-shadow:0 1px 1px #fff;
+    @extend %box-s;
+}
+
+@mixin btn-hollow( $this-color, $btn-radius: 2px ){
+    @extend %btn;
+    background: transparent!important;
+    border:1px solid $this-color;
+    border-radius: $btn-radius;
+    color: $this-color;
+}
+
+
+@mixin btn( $btn-bg1, $btn-color:$base-font, $btn-radius: 2px, $btn-bg2: false){
+    @extend %btn;
+    background:$btn-bg1;
+    @if $btn-bg2{
+        background: -webkit-gradient(linear, 0 0, 0 100%, from($btn-bg1), to($btn-bg2));
+        background: -webkit-linear-gradient(top, $btn-bg1, $btn-bg2);
+    }
+    border-radius:$btn-radius;
+    color:$btn-color!important;
+}
+
+.btn-box{
+    margin:20px 0;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    width: 100%;
+    @extend %box-s;
+
+    // &[class^="grid"],
+    // &[class*=" grid"]{
+        [class^="btn"]{
+            display: block!important;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -ms-flex: 1;
+            margin: 0 5px;
+            width: 50%;
+            &:first-of-type{margin-left: 0;}
+            &:last-of-type{margin-right: 0;}
+            &:only-of-type{width: 100%;}
+        }
+    // }
+    &.grid1-1{
+        [class^="btn"]:first-of-type:not(:only-of-type),
+        [class^="btn"]:nth-of-type(2):not(:only-of-type){
+            width: 50%;
+        }
+    }
+
+    &.block [class*="btn"],
+    .block[class*="btn"]{
+        display: block;
+        margin: 1.2em auto;
+        width: inherit!important;
+    }
+}
+
+
+.btn{
+    @include btn(#efefef);
+    &.blue{
+        background: $blue!important;
+        color:#fff!important;
+    }
+}
+.btnR{
+    @include btn(#f7675f, #fff);
+}
+.btnB{
+    @include btn(#1cb1fe, #fff);
+}
+.btnG{
+    @include btn($green, #fff);
+}
+%btnY{
+    @include btn(#fd5505, #fff);
+    @extend %btn-shadow;
+    border-width:0 0 1px;
+    font-weight:bold;
+}
+
+.btnDisabled{
+    @include btn(#d7d8dc, #999);
+    cursor: default;
+}
+
+
+
+// 网格
+// ----------------------
+@mixin wg( $B:1, $C:1% ){
+
+    width:100% / $B - $C + $C/$B;
+    margin-left: $C;
+    &:first-child{
+        margin-left: 0;
+    }
+    display:inline-block;
+    float:left;
+}
+
+// 气泡箭头
+// ------------------------
+$border:    1!default;
+@mixin arrow( $ar-site, $ar-size, $arrow-color, $border-color: $arrow-color){
+    $ar-boder:  $ar-size - $border;
+    $xyz:       bottom!default;
+
+    position:relative;
+    &:before,
+    &:after{
+        content:"";
+        position:absolute;
+        border-collapse:separate;
+    }
+    &:before{border:$ar-size solid transparent;}
+    &:after{border:$ar-boder solid transparent;}
+
+// top -----------------------
+    @if $ar-site == top-left{
+        margin-top: $ar-size;
+        &:before,
+        &:after{
+            left:$ar-boder;
+            bottom:100%;
+        }
+        &:after{left:$ar-size;}
+
+    }
+        @if $ar-site == top-center{
+            margin-top: $ar-size;
+            &:before,
+            &:after{
+                left:50%;
+                bottom:100%;
+                margin-left:- $ar-size;
+            }
+            &:after{margin-left:- $ar-boder;}
+
+        }
+        @if $ar-site == top-right{
+            margin-top: $ar-size;
+            &:before,
+            &:after{
+                right:$ar-boder;
+                bottom:100%;
+            }
+            &:after{right:$ar-size;}
+
+        }
+
+// right -----------------------
+    @if $ar-site == right-top{
+        $xyz:   left;
+        margin-right: $ar-size;
+        &:before,
+        &:after{
+            left:100%;
+            top:$ar-boder;
+        }
+        &:after{top:$ar-size;}
+
+
+    }
+        @if $ar-site == right-center{
+            $xyz:   left;
+            margin-right: $ar-size;
+            &:before,
+            &:after{
+                left:100%;
+                top:50%;
+                margin-top: - $ar-size;
+            }
+            &:after{margin-top: - $ar-boder;}
+            ;
+        }
+
+        @if $ar-site == right-bottom{
+            $xyz:   left;
+            margin-right: $ar-size;
+            &:before,
+            &:after{
+                left:100%;
+                bottom: $ar-boder;
+            }
+            &:after{bottom: $ar-size;}
+
+        }
+
+// bottom -----------------------
+    @if $ar-site == bottom-right{
+        $xyz:   top;
+        margin-bottom: $ar-size;
+        &:before,
+        &:after{
+            top:100%;
+            right: $ar-boder;
+        }
+        &:after{right: $ar-size;}
+    }
+        @if $ar-site == bottom-center{
+            $xyz:   top;
+            margin-bottom: $ar-size;
+            &:before,
+            &:after{
+                top:100%;
+                left:50%;
+                margin-left: - $ar-size;
+            }
+            &:after{margin-left: - $ar-boder;}
+        }
+        @if $ar-site == bottom-left{
+            $xyz:   top;
+            margin-bottom: $ar-size;
+            &:before,
+            &:after{
+                top: 100%;
+                left: $ar-boder;
+            }
+            &:after{left: $ar-size;}
+        }
+
+// left -----------------------
+    @if $ar-site == left-bottom{
+        $xyz:   right;
+        margin-left: $ar-size;
+        &:before,
+        &:after{
+            right: 100%;
+            bottom: $ar-boder;
+        }
+        &:after{bottom: $ar-size;}
+    }
+        @if $ar-site == left-center{
+            $xyz:   right;
+            margin-left: $ar-size;
+            &:before,
+            &:after{
+                right: 100%;
+                top: 50%;
+                margin-top: - $ar-size;
+            }
+            &:after{margin-top: - $ar-boder;}
+        }
+        @if $ar-site == left-top{
+            $xyz:   right;
+            margin-left: $ar-size;
+            &:before,
+            &:after{
+                right: 100%;
+                top: $ar-boder;
+            }
+            &:after{top: $ar-size;}
+        }
+
+    &:before{border-#{$xyz}-color:$border-color;}
+    &:after{border-#{$xyz}-color:$arrow-color;}
+
+}
+
+// 右侧指示可点击箭头、向下展开其子项、对号
+//-----------------------------------------------------
+
+$arrow-W:               6px!default;
+$arrow-H:               $arrow-W;
+$arrow-border-size:     2px!default;
+$arrow-border-color:    #ddd;//#b3b3b3
+
+//$arrow-middle:            - ( $arrow-W / 2 + 4) - ( $arrow-border-size/4 - 2);
+$arrow-middle:          - ( $arrow-W / 2 + 2) - ( $arrow-border-size/4 - 2);
+
+%arrow{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width:  $arrow-W;
+    height: $arrow-H;
+    border: $arrow-border-color solid $arrow-border-size;
+    border-left: none;
+    border-top: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+}
+
+%arrow-right{
+    @extend %arrow;
+    right: 10px;
+    top: 50%;
+    margin-top: $arrow-middle;
+}
+%arrow-right-bottom{
+    @extend %arrow-right;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    margin-top:-11px;
+}
+%arrow-right-top{
+    @extend %arrow-right;
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    margin-top:-1px;
+}
+
+%arrow-checkmark{
+    @extend %arrow;
+    -webkit-transform: rotate(45deg)!important;
+    -moz-transform: rotate(45deg)!important;
+    -ms-transform: rotate(45deg)!important;
+    border-color: $green;
+    width: 7px;
+    height: 15px;
+}
+
+li.arr-r-checkmark:after{
+    @extend %arrow-right,%arrow-checkmark;
+    margin-top:-11px;
+}
+
+.arr-r,
+.arr-r-self,
+.arr-r > li,
+.arr-r > a,
+.arr-r-checkmark,
+.arr-r-checkmark > li{display:block;position: relative;}
+
+.arr-r-checkmark > li:after,
+li.arr-r-checkmark:after,
+a.arr-r-checkmark:after{
+    @extend %arrow-right,%arrow-checkmark;
+    margin-top:-10px;
+}
+.total-info.arr-r:after,
+.arr-r-self:after,
+.arr-r > a:after,
+.arr-r > li:after,
+li.arr-r:after,
+a.arr-r:after{
+    @extend %arrow-right;
+    //right: 10px;
+}
+.in-b.arr-r:after{
+    left: 100%;
+    right: inherit;
+    margin-left: 5px;
+}
+
+
+// 两侧暴力拉回
+.margin-both-nge{
+    margin-left: -$gap;
+    margin-right: -$gap;
+}
+// table
+// ---------------------
+.m-table{ display: table; }
+.table-header,
+.m-theader{ display: table-header-group; }
+.table-body,
+.m-tbody{ display: table-row-group; }
+.table-footer,
+.m-tfooter{ display: table-footer-group; }
+.table-row,
+.m-tr{ display: table-row; }
+.m-td,.m-th{ display: table-cell;}
+
+//
+.m-table{
+    width: 100%;
+    box-sizing: border-box;
+    border-collapse:collapse;
+}
+.m-td,.m-th{ padding: 5px; }
+.m-th{ font-weight: bold; }
+// 小标签
+// .label,
+// .label-hollow{
+//     display: inline-block;
+//     height: 14px;
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 2px 4px!important;
+//     border-radius: 2px!important;
+//     padding-top: 0;
+//     font-size: .9rem!important;
+//     line-height: 1.2!important;
+//
+//     &.blue{
+//         box-shadow: 0 0 1px darken($blue, 10%) inset;
+//         color: $blue!important;
+//     }
+// }
+// .label-hollow{
+//     margin: 1px !important;
+//     // border: .5px solid #f7665e;
+//     box-shadow: 0 0 1px red inset;
+//     background: #fff;
+//     color: #fd5e5e !important;
+//
+//
+// }
+// 默认滑动
+%scrolling{
+    overflow-x: auto!important;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
